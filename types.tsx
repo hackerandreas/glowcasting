@@ -15,7 +15,7 @@ declare global {
 
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
-  Modal: undefined;
+  Filter: undefined;
   NotFound: undefined;
 };
 
@@ -25,11 +25,38 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 >;
 
 export type RootTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Castings: undefined;
+  Profile: undefined;
+  Applications: undefined;
+  Messages: undefined;
+  Settings: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
+export interface CastingDTO {
+  id: number;
+  tags?: string[];
+  title: string;
+  text?: string;
+  type?: string;
+  location?: string;
+  country?: string;
+  dateFrom?: string;
+  dateTo?: string
+  days?: number;
+  payed?: boolean;
+  budget?: number;
+  insured?: boolean;
+  numberOfRoles?: number;
+  gender?: string[];
+  ageFrom?: number;
+  ageTo?: number;
+  carRequired?: boolean;
+  languages?: string[];
+  picture?: string;
+  deadline?: string;
+}

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "myfirstproject",
-    "slug": "myfirstproject",
+    "name": "glowcasting",
+    "slug": "glowcasting",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -29,6 +29,8 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "description": "We make you glow!",
+    "githubUrl": "https://github.com/hackerandreas/glowcasting"
   }
 }
